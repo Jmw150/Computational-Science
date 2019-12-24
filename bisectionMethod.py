@@ -1,29 +1,37 @@
 #!/usr/bin/env python
 
-# bisection method
-# made by: Jordan Winkler
-# This is a demonstration of the bijection method. 
-# This program is weak against injection attacks.
-# option -f for fractions, default floating point
-#        -d for debugging or verbose mode
-#        -i [number] for iterations of function
-#        -p [number] for precision
+"""
+Bisection method implementation
 
+made by: Jordan Winkler
+"""
 
-#functions
+import os
+import argparse # Useful for command line 
+from ast import literal_eval
+import sys
+import glob # for regular expression matches
+import tqdm # for status bar
 
-##################################################################
-# bisection [function] [start] [stop] [iterations]
-# 
-# checks if the bisection method would work on a function of a given 
-# domain
-# 
-# impure function: 
-#     takes in a function and its domain
-#     returns True/False if the bisection method would work
-#     behavior changes if -f, or -d are terminal arguments
-##################################################################
+# Spills math and sympy functions into the namespace so they 
+# can be used on input
+from math import * # same as using include and namespace
+from sympy import *
+from mpmath import fac #factorial
+
+# main function of the program
 def bisection (f, start, stop, iterations) :
+    """
+    bisection [function] [start] [stop] [iterations]
+ 
+    checks if the bisection method would work on a function of 
+    a given domain
+ 
+    impure function: 
+      takes in a function and its domain
+      returns True/False if the bisection method would work
+      behavior changes if -f, or -d are terminal arguments
+    """
     if argexists(debug) :
         print ("||function start||") 
         print("function: " + functionstring)
@@ -71,6 +79,7 @@ def bisection (f, start, stop, iterations) :
             elif f(mid) == 0 :
                 return mid
 
+
 ##################################################################
 # argexists [string]
 #
@@ -117,6 +126,21 @@ if argexists(fractions) :
     from fractions import Fraction
 
 # catch common errors before starting
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--function',
+        help='Enter smooth function to taylor expand in terms of x',
+        default='sin(x)')
+    parser.add_argument('--n-derivatives',
+        help='number of expansions for a taylor polynomial'
+        default=5)
+    parser.add_argument('--center',
+        help='pick point to expand on'
+        default=0)
+    parser.add_argument('--compute',
+        help='pick number to compute with taylor polynomial'
+        default=False)
+
 if ((len(sys.argv) < 4 or len(sys.argv) > 10) or
     (len(sys.argv) == 5 and not (argexists(fractions) or argexists(debug))) or 
     (len(sys.argv) == 6 and not (argexists(iterate) or argexists(precis))) or

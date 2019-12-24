@@ -1,77 +1,86 @@
 #!/usr/bin/env python
 
-# may actually not give accurate answers
-# constant was off by a lot, x**1 was opposite sign
+#
+
+import glob,tqdm
+import numpy as np
+import os
+import argparse # Useful for command line 
+from ast import literal_eval
 
 from math import * # same as using include and namespace
 from sympy import *
 from mpmath import fac #factorial
 import sys
 
-x = Symbol('x')
 
-if len(sys.argv) != 4 :
-    print ("taylorPolynomial [function] [n-derivatives] [centered on]")
-    exit()
+if __name__ == '__main__':
 
-function = sys.argv[1]
-k = nDerivatives = eval(sys.argv[2])
-xnot = eval(sys.argv[3])
+    # This code needs at least the function to run
+    
+    if len(sys.argv) == 1 :
+        print ("taylorPolynomial [function] (n-derivatives) (centered on)")
+        exit()
 
-derivative = []
-derivative.append(function)
-index = 0
-while index <= nDerivatives :
-    derivative.append(str(diff(derivative[index],x)))
-    index += 1
+    parser = argparse.ArgumentParser()
+    parser.add_argument('function', metavar='f', type=str,
+        help='Enter smooth function to taylor expand in terms of x')
+    parser.add_argument('--function',
+        help='Enter smooth function to taylor expand in terms of x',
+        default=sys.argv[1]) # assume it is in the first spot if not specified
+    parser.add_argument('--n',
+        help='number of expansions for a taylor polynomial',
+        default='5')
+    parser.add_argument('--center',
+        help='pick point to expand on',
+        default='0')
+    parser.add_argument('--eval',
+        help='pick number to compute with taylor polynomial',
+        default='False')
 
-derivativef = []
-index = 0
-while index <= nDerivatives :
-    derivativef.append(lambda x: eval(derivative[index])) # <3
-    index += 1
+    args = parser.parse_args()
+    
 
-factorials = []
-index = 0
-while index <= nDerivatives :
-    factorials.append(fac(index))
-    index += 1
+    def Taylor_polynomial(f,a,n):
+        """
+        A taylor polynomial off of the series equation
+        sum_{n=0}^\inf f^(n)(a)/n! * (x-a)^n
 
-polynomial = []
-index = 0
-while index <= nDerivatives :
-    polynomial.append((x-xnot)**index)
-    index += 1
+        takes: f,a,n
+        f is some differentiable function
+        a is some real number
+        n is some positive integer
+        """
+        x = Symbol('x')
 
-taylorPolynomial = []
-index = 0
-while index <= nDerivatives :
-    taylorPolynomial.append(derivativef[index](xnot)/factorials[index] * polynomial[index])
-    index += 1
+        # make some derivatives first, since f^(n) is recursive
+        derivative = []
+        derivative.append(f)
+        index = 0
+        while index <= n :
+            derivative.append(str(diff(derivative[index],x)))
+            index += 1
+        #print(derivative) #debug
 
-print (taylorPolynomial)
+        taylor = ''
+        index = 0
+        while index <= n :
+            taylor += str((lambda x : eval(derivative[index]))(a)) + '/'+str(fac(index))+' * '+str((x-a)**index)+' + '
+            index += 1
+        taylor = str(eval(taylor[:-3]))
 
-taylorPolynomialf = 0
-index = 0
-while index <= nDerivatives :
-    if index % 2 == 0 :
-        taylorPolynomialf += taylorPolynomial[index]
+        return taylor
+
+    if args.eval != False :
+        print(
+            (lambda x : eval(
+                Taylor_polynomial(args.function, 
+                                  eval(args.center), 
+                                  eval(args.n))))(eval(args.eval)))
     else :
-        taylorPolynomialf -= taylorPolynomial[index]
-    index += 1
-
-print (taylorPolynomialf)
-
-taylorPolynomialfunction = lambda x : eval(str(taylorPolynomialf))
-
-test = eval(raw_input("test value: "))
-
-functionf = lambda x : eval(function)
-
-print("T(x) " + str(taylorPolynomialfunction(test)))
-print("f(x) " + str(functionf(test)))
-
-
+        print(Taylor_polynomial(args.function, 
+                                eval(args.center), 
+                                eval(args.n)))
 
     
 
