@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-#
+# A program that computes a taylor polynomial form the taylor series equation
+# Made by: Jordan Winkler
 
 import glob,tqdm
 import numpy as np
