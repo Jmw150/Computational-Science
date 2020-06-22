@@ -1,20 +1,81 @@
-Various numerical analysis algorithms
+## Various numerical analysis algorithms
 
-|   |Python   |C   |tested   |   |
+|   |Python   |C   |tested   |proven   |
 |---|---|---|---|---|
-|Bisection Method   |   |   |   |   |
-|Fixed-Point Iteration   |   |   |   |   |
+|Bisection |   |   |   |   |
+|Newton's   |   |   |   |   |
+|Secant   |   |   |   |   |
+|False position   |   |   |   |   |
+|Steffensen's   |   |   |   |   |
+|Horner's   |   |   |   |   |
+|Muller's   |   |   |   |   |
+
+|   |Python   |C   |tested   |proven   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
 |   |   |   |   |   |
 
 ## numerical algorithms
 
-Newtons method
-Secant method
-False position
-Steffensen's method 2.6
-Horner's method
-Muller's method
-Lagrange interpolating polynomials
 Neville's iterated interpolation
 Newtons divided difference formula
 Hermite Interpolation
@@ -74,5 +135,17 @@ crank nicolson
 wave equation finite difference
 finite element
 
+## statistics
+
+binomial
+geometric
+hypergeometric
+poisson
+negative binomial
+uniform
+normal
+exponential
+gamma chi-square
+beta
 
 
