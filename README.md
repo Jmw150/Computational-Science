@@ -1,8 +1,11 @@
 ## Various numerical analysis algorithms
 
+# Solve equations of one variable
+
 |   |Python   |C   |tested   |proven   |
 |---|---|---|---|---|
 |Bisection |   |   |   |   |
+|fixed point iteration |   |   |   |   |
 |Newton's   |   |   |   |   |
 |Secant   |   |   |   |   |
 |False position   |   |   |   |   |
@@ -10,22 +13,34 @@
 |Horner's   |   |   |   |   |
 |Muller's   |   |   |   |   |
 
+# Interpolation and Polynomial Approximation
+
 |   |Python   |C   |tested   |proven   |
 |---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+|Neville's iterated interpolation   |   |   |   |   |
+|Newton's Divided-Difference Formula   |   |   |   |   |
+|Hermite Interpolation   |   |   |   |   |
+|Natural Cubic Spline   |   |   |   |   |
+|Clamped Cubic Spline | | | |
+|Bezier Curve   |   |   |   |   |
+
+# Differentiation and Integration
+
+|   |Python   |C   |tested   |proven   |
+|---|---|---|---|---|
+|Composite Simpson's rule   |   |   |   |   |
+|Romberg   |   |   |   |   |
+|Adaptive Quadrature   |   |   |   |   |
+|Simpson's Double Integral   |   |   |   |   |
+|Gaussian Double Integral   |   |   |   |   |
+|Gaussian Triple Integral   |   |   |   |   |
+
+# Ordinary Differential Equations
+
+|   |Python   |C   |tested   |proven   |
+|---|---|---|---|---|
+|Euler's   |   |   |   |   |
+|Runge-Kutta order 4 |   |   |   |   |
 |   |   |   |   |   |
 |   |   |   |   |   |
 |   |   |   |   |   |
