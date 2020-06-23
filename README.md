@@ -41,11 +41,11 @@
 |---|---|---|---|---|
 |Euler's   |   |   |   |   |
 |Runge-Kutta order 4 |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+|Runge-Kutta-Fehlberg   |   |   |   |   |
+|Adams 4th order predictor corrector   |   |   |   |   |
+|Adams variable step-size predictor corrector   |   |   |   |   |
+|Extrapolation   |   |   |   |   |
+|Runge-Kutta Method for diff eq systems   |   |   |   |   |
 |   |   |   |   |   |
 |   |   |   |   |   |
 |   |   |   |   |   |
