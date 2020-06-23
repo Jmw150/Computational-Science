@@ -1,6 +1,6 @@
-## Various numerical analysis algorithms
+# Various numerical analysis algorithms
 
-# Solve equations of one variable
+## Solve equations of one variable
 
 |   |Python   |C   |tested   |proven   |
 |---|---|---|---|---|
@@ -13,7 +13,7 @@
 |Horner's   |   |   |   |   |
 |Muller's   |   |   |   |   |
 
-# Interpolation and Polynomial Approximation
+## Interpolation and Polynomial Approximation
 
 |   |Python   |C   |tested   |proven   |
 |---|---|---|---|---|
@@ -24,7 +24,7 @@
 |Clamped Cubic Spline | | | |
 |Bezier Curve   |   |   |   |   |
 
-# Differentiation and Integration
+## Differentiation and Integration
 
 |   |Python   |C   |tested   |proven   |
 |---|---|---|---|---|
@@ -35,7 +35,7 @@
 |Gaussian Double Integral   |   |   |   |   |
 |Gaussian Triple Integral   |   |   |   |   |
 
-# Ordinary Differential Equations
+## Ordinary Differential Equations
 
 |   |Python   |C   |tested   |proven   |
 |---|---|---|---|---|
@@ -46,121 +46,94 @@
 |Adams variable step-size predictor corrector   |   |   |   |   |
 |Extrapolation   |   |   |   |   |
 |Runge-Kutta Method for diff eq systems   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+|Trapezoidal with Newton Iteration   |   |   |   |   |
 
-## numerical algorithms
+## solving linear systems
 
-Neville's iterated interpolation
-Newtons divided difference formula
-Hermite Interpolation
-Natural cubic spline
-Clamped Cubic Spline
-Bezier Curve
-Composite Simpsons rule
-Romberg integration
-adaptive quadrature
-Gaussian Quadrature --
-simpsons double integral
-gaussian double integral
-gaussian triple integral
-eulers method
-runge-kutta method order 4
-runge-kutta-fehlberg method
-adams fourth order predictor corrector
-adams variable step size corrector
-extrapolation method
-runge-kutta method for systems of differential equations
-trapezoidal with newton iteration
-gaussian elimination with backward substitution
-Gaussian elimenation with partial pivoting
-gaussian elimination with scaled partial pivoting
-LU factorization
-LDL^t factorization
-Cholesky factorization
-crout factorization for tridiagonal linear systems
-Jacobi Iterative
-Gauss-Seidel Iterative
-SOR successive over relaxation
-Iterative Refinement
-Conjugate Gradient Method
-Preconditioned conjugate gradient method
-pade rational approximation
-chebyshev rational approximation
-Fast fourier transform
-Power Method
-symmetric power method
-inverse power method
-wielandt deflation
-householders method
-QR algorithm
-newtons method for systems
-broyden
-steepest descent method 10.3
-continuation algorithm
-linear shooting
-nonlinear shooting with newtons method
-linear finite difference
-nonlinear finite difference
-piecewise linear rayleigh ritz
-cubic spline rayleigh ritz
-poisson equation finite difference
-heat equation backward difference
-crank nicolson
-wave equation finite difference
-finite element
+|   |Python   |C   |tested   |proven   |
+|---|---|---|---|---|
+|Gaussian Elimination with Backward Substitution   |   |   |   |   |
+|Gaussian Elimination with Partial Pivoting |   |   |   |   |
+|Gaussian Elimination with Scaled Partial Pivoting |   |   |   |   |
+|LU factorization   |   |   |   |   |
+|LDL^t factorization   |   |   |   |   |
+|Cholesky   |   |   |   |   |
+|Crout Factorization for Tridiagonal Linear Systems   |   |   |   |   |
+
+## matrix algebra
+
+|   |Python   |C   |tested   |proven   |
+|---|---|---|---|---|
+|Jacobi Iterative   |   |   |   |   |
+|Gauss-Seidel Iterative   |   |   |   |   |
+|SOR   |   |   |   |   |
+|Iterative Refinement   |   |   |   |   |
+|Preconditioned Conjugate Gradient Method   |   |   |   |   |
+
+## approximation methods
+
+|   |Python   |C   |tested   |proven   |
+|---|---|---|---|---|
+|Pade Rational Approximation   |   |   |   |   |
+|Chebyshev Rational Approximation   |   |   |   |   |
+|Fast Fourier Transform   |   |   |   |   |
+
+## eigenvalues
+
+|   |Python   |C   |tested   |proven   |
+|---|---|---|---|---|
+|Power Method   |   |   |   |   |
+|Symmetric Power Method   |   |   |   |   |
+|Inverse Power Method   |   |   |   |   |
+|Wielandt Deflation   |   |   |   |   |
+|Householder's   |   |   |   |   |
+|QR   |   |   |   |   |
+|Singular value decomposition   |   |   |   |   |
+
+## nonlinear systems
+
+|   |Python   |C   |tested   |proven   |
+|---|---|---|---|---|
+|Newton's Method for systems   |   |   |   |   |
+|Broyden   |   |   |   |   |
+|Steepest Descent   |   |   |   |   |
+|Continuation Algorithm   |   |   |   |   |
+
+## boundary value problems for ordinary differential equations
+
+|   |Python   |C   |tested   |proven   |
+|---|---|---|---|---|
+|linear shooting   |   |   |   |   |
+|nonlinear shooting with newton's method   |   |   |   |   |
+|linear finite-difference   |   |   |   |   |
+|nonlinear finite difference   |   |   |   |   |
+|piecewise linear rayleigh-ritz   |   |   |   |   |
+|Cubic Spline Rayleigh-Ritz   |   |   |   |   |
+
+
+## Partial differential equations
+
+|   |Python   |C   |tested   |proven   |
+|---|---|---|---|---|
+|Poisson Equation Finite-Difference   |   |   |   |   |
+|Heat Equation Backward-Difference   |   |   |   |   |
+|Crank-Nicolson   |   |   |   |   |
+|Wave Equation Finite-Difference   |   |   |   |   |
+|finite element   |   |   |   |   |
 
 ## statistics
 
-binomial
-geometric
-hypergeometric
-poisson
-negative binomial
-uniform
-normal
-exponential
-gamma chi-square
-beta
+|   |Python   |C   |tested   |proven   |
+|---|---|---|---|---|
+|binomial   |   |   |   |   |
+|geometric   |   |   |   |   |
+|hypergeometric   |   |   |   |   |
+|poisson |   |   |   |   |
+|negative binomial |   |   |   |   |
+|uniform |   |   |   |   |
+|normal  |   |   |   |   |
+|exponential  |   |   |   |   |
+|gamma chi-square |   |   |   |   |
+|beta |   |   |   |   |
 
 
