@@ -4,14 +4,14 @@
 
 |   |Python   |C   |tested   |proven   |
 |---|---|---|---|---|
-|Bisection |   |   |   |   |
-|fixed point iteration |   |   |   |   |
-|Newton's   |   |   |   |   |
-|Secant   |   |   |   |   |
+|Bisection | X |   |   |   |
+|fixed point iteration |  |   |   |   |
+|Newton's   | X |   |   |   |
+|Secant   | X  |   |   |   |
 |False position   |   |   |   |   |
-|Steffensen's   |   |   |   |   |
+|Steffensen's   | X |   |   |   |
 |Horner's   |   |   |   |   |
-|Muller's   |   |   |   |   |
+|Muller's   | X  |   |   |   |
 
 ## Interpolation and Polynomial Approximation
 
@@ -19,7 +19,7 @@
 |---|---|---|---|---|
 |Neville's iterated interpolation   |   |   |   |   |
 |Newton's Divided-Difference Formula   |   |   |   |   |
-|Hermite Interpolation   |   |   |   |   |
+|Hermite Interpolation   | X  |   |   |   |
 |Natural Cubic Spline   |   |   |   |   |
 |Clamped Cubic Spline | | | |
 |Bezier Curve   |   |   |   |   |
@@ -42,8 +42,8 @@
 |Euler's   |   |   |   |   |
 |Runge-Kutta order 4 |   |   |   |   |
 |Runge-Kutta-Fehlberg   |   |   |   |   |
-|Adams 4th order predictor corrector   |   |   |   |   |
-|Adams variable step-size predictor corrector   |   |   |   |   |
+|Adams 4th Order Predictor Corrector   |   |   |   |   |
+|Adams Variable Step-Size Predictor Corrector   |   |   |   |   |
 |Extrapolation   |   |   |   |   |
 |Runge-Kutta Method for diff eq systems   |   |   |   |   |
 |Trapezoidal with Newton Iteration   |   |   |   |   |
@@ -64,8 +64,8 @@
 
 |   |Python   |C   |tested   |proven   |
 |---|---|---|---|---|
-|Jacobi Iterative   |   |   |   |   |
-|Gauss-Seidel Iterative   |   |   |   |   |
+|Jacobi Iterative   | X |   |   |   |
+|Gauss-Seidel Iterative   | X |   |   |   |
 |SOR   |   |   |   |   |
 |Iterative Refinement   |   |   |   |   |
 |Preconditioned Conjugate Gradient Method   |   |   |   |   |
@@ -88,7 +88,7 @@
 |Wielandt Deflation   |   |   |   |   |
 |Householder's   |   |   |   |   |
 |QR   |   |   |   |   |
-|Singular value decomposition   |   |   |   |   |
+|Singular Value Decomposition   |   |   |   |   |
 
 ## nonlinear systems
 
@@ -103,11 +103,11 @@
 
 |   |Python   |C   |tested   |proven   |
 |---|---|---|---|---|
-|linear shooting   |   |   |   |   |
-|nonlinear shooting with newton's method   |   |   |   |   |
-|linear finite-difference   |   |   |   |   |
-|nonlinear finite difference   |   |   |   |   |
-|piecewise linear rayleigh-ritz   |   |   |   |   |
+|Linear Shooting   |   |   |   |   |
+|Nonlinear Shooting With Newton's Method   |   |   |   |   |
+|Linear Finite-Difference   |   |   |   |   |
+|Nonlinear Finite Difference   |   |   |   |   |
+|Piecewise Linear Rayleigh-Ritz   |   |   |   |   |
 |Cubic Spline Rayleigh-Ritz   |   |   |   |   |
 
 
@@ -119,21 +119,21 @@
 |Heat Equation Backward-Difference   |   |   |   |   |
 |Crank-Nicolson   |   |   |   |   |
 |Wave Equation Finite-Difference   |   |   |   |   |
-|finite element   |   |   |   |   |
+|Finite Element   |   |   |   |   |
 
-## statistics
+## Statistics
 
 |   |Python   |C   |tested   |proven   |
 |---|---|---|---|---|
-|binomial   |   |   |   |   |
-|geometric   |   |   |   |   |
-|hypergeometric   |   |   |   |   |
-|poisson |   |   |   |   |
-|negative binomial |   |   |   |   |
-|uniform |   |   |   |   |
-|normal  |   |   |   |   |
-|exponential  |   |   |   |   |
-|gamma chi-square |   |   |   |   |
-|beta |   |   |   |   |
+|Binomial   |   |   |   |   |
+|Geometric   |   |   |   |   |
+|Hypergeometric   |   |   |   |   |
+|Poisson |   |   |   |   |
+|Negative binomial |   |   |   |   |
+|Uniform |   |   |   |   |
+|Normal  |   |   |   |   |
+|Exponential  |   |   |   |   |
+|Gamma chi-square |   |   |   |   |
+|Beta |   |   |   |   |
 
 

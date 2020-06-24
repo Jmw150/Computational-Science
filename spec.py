@@ -452,7 +452,7 @@ def norm1M (A) :
             a[i] += abs(A[j][i])
     return max(a)
 
-# jacobi iterative
+# jacobiXiterative
 # input: n = len(A[0]), A, b, x=guess, tolerance or iterations
 def jacobi (A, x, b, tolerance, iterations) :
     xo = x
