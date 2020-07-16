@@ -1,20 +1,17 @@
-# A collection of numerical analysis 
+# A collection of algorithms
 
-Numerical analysis is the study of algorithms that use numerical approximation (as opposed to symbolic manipulations) for the problems of mathematical analysis. 
-
-This includes topics such as algorithms for statistics, analytic number theory, and machine learning. The restriction is: content must be analytic, algorithms use numbers.
 
 ## Solve elementary algebraic equations of one variable
 
 |   |Python   |C   |tested   |proven   |
 |---|---|---|---|---|
 |Bisection | X |   |   |   |
-|fixed point iteration |  |   |   |   |
+|fixed point iteration |X |   |   |   |
 |Newton's   | X |   |   |   |
 |Secant   | X  |   |   |   |
-|False position   |   |   |   |   |
-|Steffensen's   | X |   |   |   |
-|Horner's   |   |   |   |   |
+|False position   |X  |   |   |   |
+|Steffensen's   |X  |   |   |   |
+|Horner's   |X   |   |   |   |
 |Muller's   | X  |   |   |   |
 
 ## Interpolation and polynomial approximation
@@ -33,7 +30,7 @@ This includes topics such as algorithms for statistics, analytic number theory, 
 |   |Python   |C   |tested   |proven   |
 |---|---|---|---|---|
 |Composite Simpson's rule   |   |   |   |   |
-|Romberg   |   |   |   |   |
+|Romberg   |X  |   |   |   |
 |Adaptive Quadrature   |   |   |   |   |
 |Simpson's Double Integral   |   |   |   |   |
 |Gaussian Double Integral   |   |   |   |   |

@@ -17,6 +17,108 @@ from ast import literal_eval
 import glob # for regular expression matches
 import tqdm # for status bar
 
+def fixed_point_iteration(function, point_0, 
+        tolerance, max_iterations):
+
+    "finds f(n) = n, given a starting point"
+    # match texbook
+    g = function
+    p_0 = point_0
+    TOL = tolerance
+    N_0 = max_iterations
+
+    i = 1
+    while i <= N_0 :
+        p = fun(p_0)
+        if abs(p - p_0) < TOL :
+            return p
+
+        i += 1
+        p_0 = p
+
+    return "failed fixed point iteration"
+            
+def false_postion(function, p_0, p_1, tolerance, max_iterations) :
+    "finds f(x) = 0, given p_0 * p_1 < 0"
+
+    f = function
+    TOL = tolerance
+    N_0 = max_iterations
+
+    i = 2
+    q_0 = f(p_0)
+    q_1 = f(p_1)
+    while i <= N_0 :
+        p = p_1 - q_1*(p_1 - p_0)/(q_1 - q_0)
+        if abs(p - p_1) < TOL :
+            return p
+        i += 1
+        q = f(p)
+        if q*q_1 < 0 :
+            p_0 = p_1
+            q_0 = q_1
+        p_1 = p
+        q_1 = q
+
+    return "failed false postion"
+
+def horners(degree, coefficients, x_0) :
+    "evaluate a polynomial and its derivative at a point"
+
+    n = degree
+    a = coefficients[:] # return a copy
+    
+    y = a[n]
+    z = a[n]
+    
+    j = n-1
+    while j > 1 :
+        y = x_0*y + a[j]
+        z = x_0*z + y
+        j -= 1
+
+    y = x_0*y + a[0]
+
+    return (y,z)
+
+def Sigma(function, start, stop) :
+    total = 0
+    while start <= stop :
+        total += function(start)
+        start += 1
+
+    return total
+
+def romberg(function, a, b, n) :
+    """approximate the integral I = \int^b_a f(x)dx
+        Note: function uses IO
+    """
+    # create n*n array of 0's
+    # should use numpy
+    f = function
+    R = [[0]*n]*n
+    
+    h = b - a
+    R[1][1] = (h/2)*(f(a) + f(b))
+    print(R[1][1]) 
+
+    for i in range(2,n+1) :
+        # appoximate a trapeziod
+        R[2][1] = (1/2)*(R[1][1] 
+                + h*Sigma(lambda k : f(a+(k - 0.5)*h), 1, 2**(i-2)))
+
+        # extrapolation
+        for j in range(2,i+1) :
+            R[2,j] = R[2,j-1] + (R[2,j-1] - R[1,j-1])/(4**(j-1)-1)
+        for j in range(1,i+1) :
+            print(R[2,j])
+
+        h = h/2
+                    
+        for j in range(1,i+1) :
+            R[1,j] = R[2,j]
+
+    return "done"
 
 def factorial (x) :
     if x > 0 :
@@ -396,7 +498,7 @@ def F(i,j) :
    else :
        return (F(i,j-1) - F(i-1,j-1))/float(f[0][i][0] - f[0][i-j][0])
 
-def makeNewtonPoly (degree=len(f[0])) :
+def makeNewtonPoly (degree) :
     if degree < len(f[0])-1 : # valid if want less, not more
         n = degree
     else :
@@ -590,7 +692,7 @@ def F(i,j) :
 # creates a string of the newtons polynomial for later, and quicker,
 # use.
 # P(x) = F(0,0) + sum_{i=1 to n} (F(i,i)*product_{j=0 to i-1} (x-x[j]))
-def makeNewtonPoly (degree=len(x)) :
+def makeNewtonPoly (degree) :
     if degree < len(x)-1 :
         n = degree
     else :
@@ -743,6 +845,7 @@ def argexists (string) :
 
 if __name__ == '__main__':
 
+    exit()
     # This code needs at least the function to run
     
     if len(sys.argv) == 1 :
