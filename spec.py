@@ -3,8 +3,9 @@
 #Various numerical analysis algorithms
 # this file is a glob of all of the algorithms
 
-import sys
-import os
+import sys 
+import os  
+
 import sympy as sp
 import numpy as np
 import math
@@ -12,10 +13,11 @@ from mpmath import fac #factorial
 from fractions import Fraction
 from fractions import Fraction as Frac
 import matplotlib.pyplot as plt #library for plotting
+
 import argparse # Useful for command line 
 from ast import literal_eval
 import glob # for regular expression matches
-import tqdm # for status bar
+#import tqdm # for status bar
 
 def fixed_point_iteration(function, point_0, 
         tolerance, max_iterations):
